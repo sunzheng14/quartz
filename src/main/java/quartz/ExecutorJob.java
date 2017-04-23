@@ -16,14 +16,14 @@ public class ExecutorJob implements Job {
 		String name = jec.getJobDetail().getKey().getName();
 		Date startDate = new Date();
 		
-		System.out.println(name + " start," + "执行时间：" + format.format(startDate) );
+		System.out.println(name + " " + Thread.currentThread().getName() + " 执行开始时间：" + format.format(startDate) + " start" );
 		
 		try {
-			Thread.sleep(5000L);
+			Thread.sleep(20000L);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		
-		System.out.println(name + "end" + "执行开始时间：" + format.format(startDate));
+		System.out.println(name + " " + Thread.currentThread().getName() + " 执行结束时间：" + format.format(startDate) + " end");
 	}
 }
