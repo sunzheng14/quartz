@@ -13,6 +13,8 @@ public class Test {
 			for(int i =0;i<10;i++){
 				System.out.println(Thread.currentThread().getName() + "," +i);
 System.out.println("hello");
+System.out.println("hello");
+System.out.println("hello");
 				}
 			}
 		}).start();
