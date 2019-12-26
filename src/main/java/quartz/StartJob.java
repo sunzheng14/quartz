@@ -16,7 +16,7 @@ public class StartJob {
 		JobDetail jobDetail = JobBuilder.newJob(ExecutorJob.class).withIdentity("job1", "group1").build();
 		//触发时间点
 		SimpleScheduleBuilder simpleScheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
-				.withIntervalInSeconds(2).repeatForever();
+				.withIntervalInSeconds(5).repeatForever();
 		
 		Trigger simpleTrigger = TriggerBuilder.newTrigger().withIdentity("trigger1", "group1")
 				.startNow().withSchedule(simpleScheduleBuilder).build();

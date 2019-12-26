@@ -27,7 +27,7 @@ public class CronTriggerJob {
 		
 		try {
 			Properties p= new Properties();
-			FileInputStream fin = new FileInputStream("E:/study/quartz/src/main/resources/quartz.properties");
+			FileInputStream fin = new FileInputStream("/Users/sunzheng/code/quartz/src/main/resources/quartz.properties");
 			
 			p.load(fin);
 			
